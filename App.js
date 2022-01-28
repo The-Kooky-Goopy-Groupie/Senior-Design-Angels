@@ -5,7 +5,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { LinearGradient } from 'expo-linear-gradient';
 import { Icon } from 'react-native-elements';
 
-
+//Dylan Welcome screen
 function Start({ navigation }) {
     return (
         <LinearGradient colors={['#fffffa', '#F2F5DD']} style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
@@ -134,6 +134,7 @@ function Account({ navigation }) {
     );
 }
 
+//Dylan Charity and statistics screen
 function Info({ navigation }) {
     return (
         <LinearGradient colors={['#fffffa', '#F2F5DD']} style={{ flex: 1, alignItems: 'center' }}>
