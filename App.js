@@ -28,53 +28,125 @@ function Start({ navigation }) {
                 textAlign: 'center',
                 margin: 15,
                 color: 'CB826A',
-            }} onPress={() => navigation.navigate('Home')} > Start </Text></View>
+            }} onPress={() => navigation.navigate('Setup1')} > Start </Text></View>
         </LinearGradient >
     );
 }
 
+//Sets up parent info
+function Setup1({ navigation }) {
+    return (
+        <LinearGradient colors={['#fffffa', '#F2F5DD']} style={{ flex: 1, alignItems: 'center' }}>
+            <Text style={styles.text}>Parent's Info</Text>
+            <TextInput style={styles.input}
+                maxLength={25}
+                placeholder="First Name" />
+            <TextInput style={styles.input}
+                maxLength={25}
+                placeholder="Last Name" />
+            <TextInput style={styles.input}
+                maxLength={25}
+                placeholder="Email Address" />
+            <TextInput style={styles.input}
+                maxLength={10}
+                keyboardType='numeric'
+                placeholder="Phone Number" />
+            <Text>Add an image input here with text under that says "This will help emergancy care ensure you are really the parent/guardian"</Text>
+            <View style={styles.arrow}><Icon name="arrowright" size={24} color="white" type="antdesign" onPress={() => navigation.navigate('Setup2')} /></View>
+        </LinearGradient >
+    );
+}
+
+//Sets up child Info
+function Setup2({ navigation }) {
+    return (
+        <LinearGradient colors={['#fffffa', '#F2F5DD']} style={{ flex: 1, alignItems: 'center' }}>
+            <Text style={styles.text}>Parent's Info</Text>
+            <TextInput style={styles.input}
+                maxLength={25}
+                placeholder="First Name" />
+            <TextInput style={styles.input}
+                maxLength={25}
+                placeholder="Last Name" />
+            <TextInput style={styles.input}
+                maxLength={25}
+                placeholder="Date of Birth" />
+            <TextInput style={styles.input}
+                maxLength={10}
+                keyboardType='numeric'
+                placeholder="Allergies" />
+            <TextInput style={styles.input}
+                maxLength={25}
+                placeholder="Additional info to tell emergancy services about this child" />
+            <View style={styles.arrow}><Icon name="arrowright" size={24} color="white" type="antdesign" onPress={() => navigation.navigate('Setup3')} /></View>
+        </LinearGradient >
+    );
+}
+
+//Sets up Car info
+function Setup3({ navigation }) {
+    return (
+        <LinearGradient colors={['#fffffa', '#F2F5DD']} style={{ flex: 1, alignItems: 'center' }}>
+            <Text style={styles.text}>Parent's Info</Text>
+            <TextInput style={styles.input}
+                maxLength={25}
+                placeholder="Model" />
+            <TextInput style={styles.input}
+                maxLength={4}
+                keyboardType='numeric'
+                placeholder="Year" />
+            <TextInput style={styles.input}
+                maxLength={25}
+                placeholder="Color" />
+            <TextInput style={styles.input}
+                maxLength={6}
+                keyboardType='numeric'
+                placeholder="Plate Number" />
+            <View style={styles.arrow}><Icon name="arrowright" size={24} color="white" type="antdesign" onPress={() => navigation.navigate('Home')} /></View>
+        </LinearGradient >
+    );
+}
 
 
 function Home({ navigation }) {
     return (
-        <LinearGradient colors={['#fffffa', '#F2F5DD']} style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-            <View style={{ position: 'absolute' }}><Text style={styles.question}> GPS, Button, Camera, input end location </Text></View>
-            <View style={styles.arrow}><Icon name="arrowright" size={20} color="white" type="antdesign" onPress={() => navigation.navigate('Start')} />
-            </View >
+        <LinearGradient colors={['#fffffa', '#F2F5DD']} style={{ flex: 1, alignItems: 'center' }}>
+            <View style={{ position: 'absolute' }}><Text style={styles.text}> Child info, parent info, car info </Text></View>
+            <View style={styles.navBar}>
+                <Icon name="arrowright" size={20} color="white" type="antdesign" onPress={() => navigation.navigate('Account')} />
+                <Icon name="arrowright" size={20} color="black" type="antdesign"/>
+                <Icon name="arrowright" size={20} color="white" type="antdesign" onPress={() => navigation.navigate('Info')} />
+            </View>
         </LinearGradient >
     );
 }
 
+function Account({ navigation }) {
+    return (
+        <LinearGradient colors={['#fffffa', '#F2F5DD']} style={{ flex: 1, alignItems: 'center' }}>
+            <View style={{ position: 'absolute' }}><Text style={styles.text}> GPS, Button, Camera, input end location </Text></View>
+            <View style={styles.navBar}>
+                <Icon name="arrowright" size={20} color="black" type="antdesign" />
+                <Icon name="arrowright" size={20} color="white" type="antdesign" onPress={() => navigation.navigate('Home')}/>
+                <Icon name="arrowright" size={20} color="white" type="antdesign" onPress={() => navigation.navigate('Info')} />
+            </View>
+        </LinearGradient >
+    );
+}
 
-const size1 = 500
-const size2 = 300
-const Circle = () => {
+function Info({ navigation }) {
     return (
-        <LinearGradient colors={['#631e15', '#ff0060']} style={{
-            width: size1,
-            height: size1,
-            borderRadius: size1 / 2,
-            position: 'absolute',
-            margin: 0,
-            bottom: 580,
-        }}>
+        <LinearGradient colors={['#fffffa', '#F2F5DD']} style={{ flex: 1, alignItems: 'center' }}>
+            <View style={{ position: 'absolute' }}><Text style={styles.text}> Charity info and Statistics </Text></View>
+            <View style={styles.navBar}>
+                <Icon name="arrowright" size={20} color="white" type="antdesign" onPress={() => navigation.navigate('Account')}m/>
+                <Icon name="arrowright" size={20} color="white" type="antdesign" onPress={() => navigation.navigate('Home')} />
+                <Icon name="arrowright" size={20} color="black" type="antdesign" />
+            </View>
         </LinearGradient >
     );
-};
-const Circle2 = () => {
-    return (
-        <LinearGradient colors={['#631e15', '#ff0060']} style={{
-            width: size2,
-            height: size2,
-            borderRadius: size2 / 2,
-            position: 'absolute',
-            margin: 0,
-            bottom: 500,
-            left: 250,
-        }}>
-        </LinearGradient >
-    );
-};
+}
+
 
 const Stack = createStackNavigator();
 
@@ -90,8 +162,28 @@ function MyStack() {
                 component={Start}
             />
             <Stack.Screen
+                name="Setup1"
+                component={Setup1}
+            />
+            <Stack.Screen
+                name="Setup2"
+                component={Setup2}
+            />
+            <Stack.Screen
+                name="Setup3"
+                component={Setup3}
+            />
+            <Stack.Screen
                 name="Home"
                 component={Home}
+            />
+            <Stack.Screen
+                name="Account"
+                component={Account}
+            />
+            <Stack.Screen
+                name="Info"
+                component={Info}
             />
         </Stack.Navigator>
     );
@@ -118,12 +210,12 @@ const styles = {
         right: 20,
         bottom: 20,
     },
-    question: {
+    text: {
         fontSize: 32,
         color: "black",
         textAlign: 'center',
         margin: 0,
-        marginBottom: 600,
+        marginBottom: 400,
     },
     input: {
         height: 50,
@@ -132,7 +224,16 @@ const styles = {
         padding: 10,
         width: "75%",
         borderRadius: 10,
-        marginBottom: 200,
+        marginBottom: 0,
+    },
+    navBar: {
+        flexDirection: 'row',
+        justifyContent: 'space-evenly',
+        backgroundColor: 'green',
+        padding: 10,
+        width: "100%",
+        position: 'absolute',
+        margin: 0,
+        bottom: 0,
     },
 };
-
