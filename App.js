@@ -15,7 +15,7 @@ function Start({ navigation }) {
                 margin: 10,
                 marginBottom: 0,
                 color: 'black',
-            }}> Gaurdian Angel Saftey Alerting System </Text>
+            }}> Guardian Angel Saftey Alerting System </Text>
             <View style={{
                 backgroundColor: '#CB826A',
                 padding: 0,
