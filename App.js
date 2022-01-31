@@ -37,7 +37,7 @@ function Start({ navigation }) {
 function Setup1({ navigation }) {
     return (
         <LinearGradient colors={['#fffffa', '#F2F5DD']} style={{ flex: 1, alignItems: 'center' }}>
-            <Text style={styles.text}>Parent's Info</Text>
+            <Text style={styles.registerTitle}>Parent's Info</Text>
             <TextInput style={styles.input}
                 maxLength={25}
                 placeholder="First Name" />
@@ -61,7 +61,7 @@ function Setup1({ navigation }) {
 function Setup2({ navigation }) {
     return (
         <LinearGradient colors={['#fffffa', '#F2F5DD']} style={{ flex: 1, alignItems: 'center' }}>
-            <Text style={styles.text}>Parent's Info</Text>
+            <Text style={styles.registerTitle}>Childs's Info</Text>
             <TextInput style={styles.input}
                 maxLength={25}
                 placeholder="First Name" />
@@ -70,13 +70,15 @@ function Setup2({ navigation }) {
                 placeholder="Last Name" />
             <TextInput style={styles.input}
                 maxLength={25}
+                keyboardType='numeric'
                 placeholder="Date of Birth" />
             <TextInput style={styles.input}
-                maxLength={10}
-                keyboardType='numeric'
+                maxLength={1000}
+                multiline={true}
                 placeholder="Allergies" />
             <TextInput style={styles.input}
                 maxLength={25}
+                multiline={true}
                 placeholder="Additional info to tell emergancy services about this child" />
             <View style={styles.arrow}><Icon name="arrowright" size={24} color="white" type="antdesign" onPress={() => navigation.navigate('Setup3')} /></View>
         </LinearGradient >
@@ -87,7 +89,7 @@ function Setup2({ navigation }) {
 function Setup3({ navigation }) {
     return (
         <LinearGradient colors={['#fffffa', '#F2F5DD']} style={{ flex: 1, alignItems: 'center' }}>
-            <Text style={styles.text}>Parent's Info</Text>
+            <Text style={styles.registerTitle}>Vehicle Info</Text>
             <TextInput style={styles.input}
                 maxLength={25}
                 placeholder="Model" />
@@ -106,7 +108,6 @@ function Setup3({ navigation }) {
         </LinearGradient >
     );
 }
-
 
 function Home({ navigation }) {
     return (
@@ -236,5 +237,12 @@ const styles = {
         position: 'absolute',
         margin: 0,
         bottom: 0,
+    },
+    registerTitle: {
+        fontSize: 32,
+        color: "black",
+        textAlign: 'center',
+        margin: 5,
+        marginTop: 50,
     },
 };
