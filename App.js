@@ -4,32 +4,51 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { LinearGradient } from 'expo-linear-gradient';
 import { Icon } from 'react-native-elements';
+import { BackgroundImage } from 'react-native-elements/dist/config';
 
 //Dylan Welcome screen
 function Start({ navigation }) {
     return (
-        <LinearGradient colors={['#fffffa', '#F2F5DD']} style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+        
+        <LinearGradient colors={['#8F0D32']} style={{ flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: '#FABD27'}}>
+          
+          <BackgroundImage style={{
+        //Place to put in the picture
+            }}></BackgroundImage>
+
             <Text style={{
+        //Title text items
                 fontSize: 64,
+                fontFamily: 'Cambria Math',
                 textAlign: 'center',
                 margin: 10,
                 marginBottom: 0,
                 color: 'black',
             }}> Guardian Angel Saftey Alerting System </Text>
+            
+        
+
             <View style={{
+                //Button styleing title screen
                 backgroundColor: '#CB826A',
                 padding: 0,
                 width: "50%",
                 marginBottom: 0,
                 marginTop: 40,
                 borderRadius: 50,
+
             }}><Text style={{
+                // text style for button.
                 fontSize: 18,
                 textAlign: 'center',
+                fontFamily: 'Cambria Math',
                 margin: 15,
-                color: 'CB826A',
-            }} onPress={() => navigation.navigate('Setup1')} > Start </Text></View>
+                color: 'black',
+            }} onPress={() => navigation.navigate('Setup1')}>Start Protecting</Text></View>
+       
+       
         </LinearGradient >
+        
     );
 }
 
@@ -216,6 +235,7 @@ const styles = {
         fontSize: 32,
         color: "black",
         textAlign: 'center',
+        fontFamily: 'Cambria Math',
         margin: 0,
         marginBottom: 400,
     },
@@ -242,6 +262,7 @@ const styles = {
         fontSize: 32,
         color: "black",
         textAlign: 'center',
+        fontFamily: 'Cambria Math',
         margin: 5,
         marginTop: 50,
     },
