@@ -15,7 +15,7 @@ function Start({ navigation }) {
                 margin: 10,
                 marginBottom: 0,
                 color: 'black',
-            }}> Guardian Angel Saftey Alerting System </Text>
+            }}> Guardian Angel Safety Alerting System </Text>
             <View style={{
                 backgroundColor: '#CB826A',
                 padding: 0,
