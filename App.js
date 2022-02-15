@@ -44,7 +44,7 @@ function Start({ navigation }) {
                 fontFamily: 'Cambria Math',
                 margin: 15,
                 color: 'black',
-            }} onPress={() => navigation.navigate('Setup1')}>Start Protecting</Text></View>
+            }}onPress={() => navigation.navigate('Setup1')}>Start Protecting</Text></View>
        
        
         </LinearGradient >
