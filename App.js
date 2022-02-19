@@ -12,9 +12,15 @@ function Start({ navigation }) {
         
         <LinearGradient colors={['#8F0D32']} style={{ flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: '#FABD27'}}>
           
-          <BackgroundImage style={{
-        //Place to put in the picture
-            }}></BackgroundImage>
+          <Text style={{
+              // to change this we have to reupload the photo online and then get a link but besides that it's not too bad
+             width: "120%",
+             height: "120%",
+             Align: 'center',
+            // marginRight: "50%", this looks good for an app style
+            // marginLeft: "100%",
+            marginLeft: "80%", // this looks good on the web build
+            }}><img src="https://i.pinimg.com/564x/2f/f0/ee/2ff0eeb4536e3ba1f9f2a1f9be3328b6.jpg"/></Text>
 
             <Text style={{
         //Title text items
@@ -30,23 +36,20 @@ function Start({ navigation }) {
 
             <View style={{
                 //Button styleing title screen
-                backgroundColor: '#CB826A',
+                backgroundColor: '#091638',
                 padding: 0,
                 width: "50%",
                 marginBottom: 0,
                 marginTop: 40,
                 borderRadius: 50,
-
             }}><Text style={{
                 // text style for button.
                 fontSize: 18,
                 textAlign: 'center',
                 fontFamily: 'Cambria Math',
                 margin: 15,
-                color: 'black',
+                color: 'white',
             }}onPress={() => navigation.navigate('Setup1')}>Start Protecting</Text></View>
-       
-       
         </LinearGradient >
         
     );
