@@ -13,7 +13,7 @@ function Start({ navigation }) {
         <LinearGradient colors={['#8F0D32']} style={{ flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: '#FABD27'}}>
           
           <Text style={{
-              // to change this we have to reupload the photo online and then get a link but besides that it's not too bad
+            // to change this we have to reupload the photo online and then get a link but besides that it's not too bad
              width: "120%",
              height: "120%",
              Align: 'center',
@@ -23,7 +23,7 @@ function Start({ navigation }) {
             }}><img src="https://i.pinimg.com/564x/2f/f0/ee/2ff0eeb4536e3ba1f9f2a1f9be3328b6.jpg"/></Text>
 
             <Text style={{
-        //Title text items
+                //Title text items
                 fontSize: 64,
                 fontFamily: 'Cambria Math',
                 textAlign: 'center',
@@ -49,7 +49,7 @@ function Start({ navigation }) {
                 fontFamily: 'Cambria Math',
                 margin: 15,
                 color: 'white',
-            }}onPress={()=> navigation.navigate('Setup1')}>Start Protecting</Text></View>
+            }} onPress={()=> navigation.navigate('Setup1')}>Start Protecting</Text></View>
         </LinearGradient >
     );
 }
@@ -98,7 +98,7 @@ function Setup2({ navigation }) {
                 multiline={true}
                 placeholder="Allergies" />
             <TextInput style={styles.input}
-                maxLength={25}
+                maxLength={25} // THIS SHOULD LIKELY BE LONGER
                 multiline={true}
                 placeholder="Additional info to tell emergancy services about this child" />
             <View style={styles.arrow}><Icon name="arrowright" size={24} color="white" type="antdesign" onPress={() => navigation.navigate('Setup3')} /></View>
@@ -247,6 +247,7 @@ const styles = {
         borderWidth: 1,
         padding: 10,
         width: "75%",
+        fontFamily: 'Cambria Math',
         borderRadius: 10,
         marginBottom: 0,
     },
