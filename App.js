@@ -10,29 +10,19 @@ import { BackgroundImage } from 'react-native-elements/dist/config';
 function Start({ navigation }) {
     return (
         
-        <LinearGradient colors={['#8F0D32']} style={{ flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: '#FABD27'}}>
-          
-          <Text style={{
-            // to change this we have to reupload the photo online and then get a link but besides that it's not too bad
-             width: "120%",
-             height: "120%",
-             Align: 'center',
-            // marginRight: "50%", this looks good for an app style
-            // marginLeft: "100%",
-            marginLeft: "80%", // this looks good on the web build
-            }}><img src="https://i.pinimg.com/564x/2f/f0/ee/2ff0eeb4536e3ba1f9f2a1f9be3328b6.jpg"/></Text>
+        <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: '#FABD27'}}>
 
-            <Text style={{
-                //Title text items
-                fontSize: 64,
-                fontFamily: 'Cambria Math',
-                textAlign: 'center',
-                margin: 10,
-                marginBottom: 0,
-                color: 'black',
-            }}> Guardian Angel Saftey Alerting System </Text>
-            
-        
+            <Image
+                style={{
+                    // to change this we have to reupload the photo online and then get a link but besides that it's not too bad
+                    width: "80%",
+                    height: "80%",
+                    // marginRight: "50%", this looks good for an app style
+                    // marginLeft: "100%",
+                    //marginLeft: "80%", // this looks good on the web build
+                }}
+                source={{ uri: 'https://i.pinimg.com/564x/2f/f0/ee/2ff0eeb4536e3ba1f9f2a1f9be3328b6.jpg' }}
+            />
 
             <View style={{
                 //Button styleing title screen
@@ -46,18 +36,17 @@ function Start({ navigation }) {
                 // text style for button.
                 fontSize: 18,
                 textAlign: 'center',
-                fontFamily: 'Cambria Math',
                 margin: 15,
                 color: 'white',
-            }} onPress={()=> navigation.navigate('Setup1')}>Start Protecting</Text></View>
-        </LinearGradient >
+            }} onPress={() => navigation.navigate('Setup1')}>Start Protecting</Text></View>
+        </View >
     );
 }
 
 //Sets up parent info
 function Setup1({ navigation }) {
     return (
-        <LinearGradient colors={['#fffffa', '#F2F5DD']} style={{ flex: 1, alignItems: 'center' }}>
+        <View style={{ flex: 1, alignItems: 'center', backgroundColor: '#FABD27' }}>
             <Text style={styles.registerTitle}>Parent's Info</Text>
             <TextInput style={styles.input}
                 maxLength={25}
@@ -74,14 +63,14 @@ function Setup1({ navigation }) {
                 placeholder="Phone Number" />
             <Text>Add an image input here with text under that says "This will help emergancy care ensure you are really the parent/guardian"</Text>
             <View style={styles.arrow}><Icon name="arrowright" size={24} color="white" type="antdesign" onPress={() => navigation.navigate('Setup2')} /></View>
-        </LinearGradient >
+        </View >
     );
 }
 
 //Sets up child Info
 function Setup2({ navigation }) {
     return (
-        <LinearGradient colors={['#fffffa', '#F2F5DD']} style={{ flex: 1, alignItems: 'center' }}>
+        <View style={{ flex: 1, alignItems: 'center', backgroundColor: '#FABD27' }}>
             <Text style={styles.registerTitle}>Childs's Info</Text>
             <TextInput style={styles.input}
                 maxLength={25}
@@ -102,14 +91,14 @@ function Setup2({ navigation }) {
                 multiline={true}
                 placeholder="Additional info to tell emergancy services about this child" />
             <View style={styles.arrow}><Icon name="arrowright" size={24} color="white" type="antdesign" onPress={() => navigation.navigate('Setup3')} /></View>
-        </LinearGradient >
+        </View >
     );
 }
 
 //Sets up Car info
 function Setup3({ navigation }) {
     return (
-        <LinearGradient colors={['#fffffa', '#F2F5DD']} style={{ flex: 1, alignItems: 'center' }}>
+        <View style={{ flex: 1, alignItems: 'center', backgroundColor: '#FABD27' }}>
             <Text style={styles.registerTitle}>Vehicle Info</Text>
             <TextInput style={styles.input}
                 maxLength={25}
@@ -126,7 +115,7 @@ function Setup3({ navigation }) {
                 keyboardType='numeric'
                 placeholder="Plate Number" />
             <View style={styles.arrow}><Icon name="arrowright" size={24} color="white" type="antdesign" onPress={() => navigation.navigate('Home')} /></View>
-        </LinearGradient >
+        </View >
     );
 }
 
@@ -222,7 +211,7 @@ export default function App() {
 
 const styles = {
     arrow: {
-        backgroundColor: '#CB826A',
+        backgroundColor: '#091638',
         padding: 15,
         width: "12%",
         marginBottom: 0,
@@ -237,7 +226,6 @@ const styles = {
         fontSize: 32,
         color: "black",
         textAlign: 'center',
-        fontFamily: 'Cambria Math',
         margin: 0,
         marginBottom: 400,
     },
@@ -247,7 +235,6 @@ const styles = {
         borderWidth: 1,
         padding: 10,
         width: "75%",
-        fontFamily: 'Cambria Math',
         borderRadius: 10,
         marginBottom: 0,
     },
@@ -265,7 +252,6 @@ const styles = {
         fontSize: 32,
         color: "black",
         textAlign: 'center',
-        fontFamily: 'Cambria Math',
         margin: 5,
         marginTop: 50,
     },
