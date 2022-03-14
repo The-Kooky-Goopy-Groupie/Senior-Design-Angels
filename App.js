@@ -46,21 +46,26 @@ function Start({ navigation }) {
 //Sets up parent info
 function Setup1({ navigation }) {
     return (
-        <View style={{ flex: 1, alignItems: 'center', backgroundColor: '#FABD27' }}>
+        <View style={{ flex: 1, backgroundColor: '#FABD27' }}>
             <Text style={styles.registerTitle}>Parent's Info</Text>
+            <Text style={styles.fieldTitle}>First Name</Text>
             <TextInput style={styles.input}
                 maxLength={25}
                 placeholder="First Name" />
+            <Text style={styles.fieldTitle}>Last Name</Text>
             <TextInput style={styles.input}
                 maxLength={25}
                 placeholder="Last Name" />
+            <Text style={styles.fieldTitle}>Email Address</Text>
             <TextInput style={styles.input}
                 maxLength={25}
                 placeholder="Email Address" />
+            <Text style={styles.fieldTitle}>Phone Number</Text>
             <TextInput style={styles.input}
                 maxLength={10}
                 keyboardType='numeric'
                 placeholder="Phone Number" />
+            <Text style={styles.fieldTitle}>Picture of Parent Gaurdian</Text>
             <Text>Add an image input here with text under that says "This will help emergancy care ensure you are really the parent/guardian"</Text>
             <View style={styles.arrow}><Icon name="arrowright" size={24} color="white" type="antdesign" onPress={() => navigation.navigate('Setup2')} /></View>
         </View >
@@ -70,22 +75,27 @@ function Setup1({ navigation }) {
 //Sets up child Info
 function Setup2({ navigation }) {
     return (
-        <View style={{ flex: 1, alignItems: 'center', backgroundColor: '#FABD27' }}>
+        <View style={{ flex: 1, backgroundColor: '#FABD27' }}>
             <Text style={styles.registerTitle}>Childs's Info</Text>
+            <Text style={styles.fieldTitle}>First Name</Text>
             <TextInput style={styles.input}
                 maxLength={25}
                 placeholder="First Name" />
+            <Text style={styles.fieldTitle}>Last Name</Text>
             <TextInput style={styles.input}
                 maxLength={25}
                 placeholder="Last Name" />
+            <Text style={styles.fieldTitle}>Date of Birth</Text>
             <TextInput style={styles.input}
                 maxLength={25}
                 keyboardType='numeric'
                 placeholder="Date of Birth" />
+            <Text style={styles.fieldTitle}>Allergies</Text>
             <TextInput style={styles.input}
                 maxLength={1000}
                 multiline={true}
                 placeholder="Allergies" />
+            <Text style={styles.fieldTitle}>Additional Info</Text>
             <TextInput style={styles.input}
                 maxLength={25} // THIS SHOULD LIKELY BE LONGER
                 multiline={true}
@@ -98,18 +108,22 @@ function Setup2({ navigation }) {
 //Sets up Car info
 function Setup3({ navigation }) {
     return (
-        <View style={{ flex: 1, alignItems: 'center', backgroundColor: '#FABD27' }}>
+        <View style={{ flex: 1, backgroundColor: '#FABD27' }}>
             <Text style={styles.registerTitle}>Vehicle Info</Text>
+            <Text style={styles.fieldTitle}>Model</Text>
             <TextInput style={styles.input}
                 maxLength={25}
                 placeholder="Model" />
+            <Text style={styles.fieldTitle}>Year</Text>
             <TextInput style={styles.input}
                 maxLength={4}
                 keyboardType='numeric'
                 placeholder="Year" />
+            <Text style={styles.fieldTitle}>Color</Text>
             <TextInput style={styles.input}
                 maxLength={25}
                 placeholder="Color" />
+            <Text style={styles.fieldTitle}>Plate Number</Text>
             <TextInput style={styles.input}
                 maxLength={6}
                 keyboardType='numeric'
@@ -213,7 +227,7 @@ const styles = {
     arrow: {
         backgroundColor: '#091638',
         padding: 15,
-        width: "12%",
+        width: "15%",
         marginBottom: 0,
         marginTop: 0,
         borderRadius: 90,
@@ -231,7 +245,8 @@ const styles = {
     },
     input: {
         height: 50,
-        margin: 12,
+        left: '12.5%',
+        margin: 2,
         borderWidth: 1,
         padding: 10,
         width: "75%",
@@ -253,6 +268,16 @@ const styles = {
         color: "black",
         textAlign: 'center',
         margin: 5,
-        marginTop: 50,
+        marginTop: 100,
+        marginBottom: 20,
+    },
+    fieldTitle: {
+        fontSize: 13,
+        color: "black",
+        textAlign: 'left',
+        margin: 5,
+        marginTop: 20,
+        marginBottom: 0,
+        left: '12.5%',
     },
 };
