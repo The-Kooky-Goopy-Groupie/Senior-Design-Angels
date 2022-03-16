@@ -135,41 +135,41 @@ function Setup3({ navigation }) {
 
 function Home({ navigation }) {
     return (
-        <LinearGradient colors={['#fffffa', '#F2F5DD']} style={{ flex: 1, alignItems: 'center' }}>
+        <View style={{ flex: 1, backgroundColor: '#FABD27' }}>
             <View style={{ position: 'absolute' }}><Text style={styles.text}> Child info, parent info, car info </Text></View>
             <View style={styles.navBar}>
-                <Icon name="arrowright" size={20} color="white" type="antdesign" onPress={() => navigation.navigate('Account')} />
-                <Icon name="arrowright" size={20} color="black" type="antdesign"/>
-                <Icon name="arrowright" size={20} color="white" type="antdesign" onPress={() => navigation.navigate('Info')} />
+                <Icon name="arrowright" size={25} color="white" type="antdesign" onPress={() => navigation.navigate('Account')} />
+                <Icon name="arrowright" size={25} color="yellow" type="antdesign"/>
+                <Icon name="arrowright" size={25} color="white" type="antdesign" onPress={() => navigation.navigate('Info')} />
             </View>
-        </LinearGradient >
+        </View >
     );
 }
 
 function Account({ navigation }) {
     return (
-        <LinearGradient colors={['#fffffa', '#F2F5DD']} style={{ flex: 1, alignItems: 'center' }}>
+        <View style={{ flex: 1, backgroundColor: '#FABD27' }}>
             <View style={{ position: 'absolute' }}><Text style={styles.text}> GPS, Button, Camera, input end location </Text></View>
             <View style={styles.navBar}>
-                <Icon name="arrowright" size={20} color="black" type="antdesign" />
-                <Icon name="arrowright" size={20} color="white" type="antdesign" onPress={() => navigation.navigate('Home')}/>
-                <Icon name="arrowright" size={20} color="white" type="antdesign" onPress={() => navigation.navigate('Info')} />
+                <Icon name="arrowright" size={25} color="yellow" type="antdesign" />
+                <Icon name="arrowright" size={25} color="white" type="antdesign" onPress={() => navigation.navigate('Home')}/>
+                <Icon name="arrowright" size={25} color="white" type="antdesign" onPress={() => navigation.navigate('Info')} />
             </View>
-        </LinearGradient >
+        </View >
     );
 }
 
 //Dylan Charity and statistics screen
 function Info({ navigation }) {
     return (
-        <LinearGradient colors={['#fffffa', '#F2F5DD']} style={{ flex: 1, alignItems: 'center' }}>
+        <View style={{ flex: 1, backgroundColor: '#FABD27' }}>
             <View style={{ position: 'absolute' }}><Text style={styles.text}> Charity info and Statistics </Text></View>
             <View style={styles.navBar}>
-                <Icon name="arrowright" size={20} color="white" type="antdesign" onPress={() => navigation.navigate('Account')}m/>
-                <Icon name="arrowright" size={20} color="white" type="antdesign" onPress={() => navigation.navigate('Home')} />
-                <Icon name="arrowright" size={20} color="black" type="antdesign" />
+                <Icon name="arrowright" size={25} color="white" type="antdesign" onPress={() => navigation.navigate('Account')}m/>
+                <Icon name="arrowright" size={25} color="white" type="antdesign" onPress={() => navigation.navigate('Home')} />
+                <Icon name="arrowright" size={25} color="yellow" type="antdesign" />
             </View>
-        </LinearGradient >
+        </View >
     );
 }
 
@@ -240,8 +240,8 @@ const styles = {
         fontSize: 32,
         color: "black",
         textAlign: 'center',
-        margin: 0,
-        marginBottom: 400,
+        marginTop: 100,
+        marginBottom: 200,
     },
     input: {
         height: 50,
@@ -256,8 +256,8 @@ const styles = {
     navBar: {
         flexDirection: 'row',
         justifyContent: 'space-evenly',
-        backgroundColor: 'green',
-        padding: 10,
+        backgroundColor: '#091638',
+        padding: 20,
         width: "100%",
         position: 'absolute',
         margin: 0,
