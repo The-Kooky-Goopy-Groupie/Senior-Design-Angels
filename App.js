@@ -66,7 +66,8 @@ function Setup1({ navigation }) {
                 keyboardType='numeric'
                 placeholder="Phone Number" />
             <Text style={styles.fieldTitle}>Picture of Parent Gaurdian</Text>
-            <Text>Add an image input here with text under that says "This will help emergancy care ensure you are really the parent/guardian"</Text>
+            <View style={styles.imgInpt}><Icon iconStyle={{ marginTop: 10 }} name="camera" size={62} color="#5e6472" type="entypo"/></View>
+            <Text style={{}}>This will help emergancy care verify you as the parent/guardian</Text>
             <View style={styles.arrow}><Icon name="arrowright" size={24} color="white" type="antdesign" onPress={() => navigation.navigate('Setup2')} /></View>
         </View >
     );
@@ -100,6 +101,9 @@ function Setup2({ navigation }) {
                 maxLength={25} // THIS SHOULD LIKELY BE LONGER
                 multiline={true}
                 placeholder="Additional info to tell emergancy services about this child" />
+            <Text style={styles.fieldTitle}>Picture of Child</Text>
+            <View style={styles.imgInpt}><Icon iconStyle={{ marginTop: 10 }} name="camera" size={62} color="#5e6472" type="entypo" /></View>
+            <Text>This will help emergancy identify your child</Text>
             <View style={styles.arrow}><Icon name="arrowright" size={24} color="white" type="antdesign" onPress={() => navigation.navigate('Setup3')} /></View>
         </View >
     );
@@ -128,6 +132,9 @@ function Setup3({ navigation }) {
                 maxLength={6}
                 keyboardType='numeric'
                 placeholder="Plate Number" />
+            <Text style={styles.fieldTitle}>Picture of Vehicle</Text>
+            <View style={styles.imgInpt}><Icon iconStyle={{ marginTop: 10 }} name="camera" size={62} color="#5e6472" type="entypo" /></View>
+            <Text>This will help emergancy care identify your car</Text>
             <View style={styles.arrow}><Icon name="arrowright" size={24} color="white" type="antdesign" onPress={() => navigation.navigate('Home')} /></View>
         </View >
     );
@@ -279,5 +286,15 @@ const styles = {
         marginTop: 20,
         marginBottom: 0,
         left: '12.5%',
+    },
+    imgInpt: {
+        backgroundColor: '#FABD27',
+        height: 110,
+        margin: 10,
+        borderWidth: 1,
+        padding: 10,
+        width: "30%",
+        borderRadius: 12,
+        left: '11%',
     },
 };
