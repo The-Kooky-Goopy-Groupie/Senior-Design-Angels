@@ -80,7 +80,7 @@ function Setup1({ navigation }) {
 function Setup2({ navigation }) {
     return (
         <View style={{ flex: 1, backgroundColor: '#FABD27' }}>
-            <Text style={styles.registerTitle}>Childs's Info</Text>
+            <Text style={styles.registerTitle}>Child's Info</Text>
             <Text style={styles.fieldTitle}>First Name</Text>
             <TextInput style={styles.input}
                 maxLength={25}
