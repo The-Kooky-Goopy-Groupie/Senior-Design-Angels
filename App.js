@@ -66,8 +66,11 @@ function Setup1({ navigation }) {
                 keyboardType='numeric'
                 placeholder="Phone Number" />
             <Text style={styles.fieldTitle}>Picture of Parent Gaurdian</Text>
-            <View style={styles.imgInpt}><Icon iconStyle={{ marginTop: 10 }} name="camera" size={62} color="#5e6472" type="entypo"/></View>
-            <Text style={{}}>This will help emergancy care verify you as the parent/guardian</Text>
+            <View style={styles.cameraBar}>
+                <View style={styles.imgInpt}><Icon iconStyle={{ marginTop: 10 }} name="camera" size={62} color="#5e6472" type="entypo" /></View>
+                <View style={styles.imgInpt}><Icon iconStyle={{ marginTop: 10 }} name="camera" size={62} color="#5e6472" type="entypo" /></View>
+            </View>
+            <Text style={{fontSize: 10, left: '12.5%'}}>This will help emergancy care verify you as the parent/guardian</Text>
             <View style={styles.arrow}><Icon name="arrowright" size={24} color="white" type="antdesign" onPress={() => navigation.navigate('Setup2')} /></View>
         </View >
     );
@@ -102,8 +105,11 @@ function Setup2({ navigation }) {
                 multiline={true}
                 placeholder="Additional info to tell emergancy services about this child" />
             <Text style={styles.fieldTitle}>Picture of Child</Text>
-            <View style={styles.imgInpt}><Icon iconStyle={{ marginTop: 10 }} name="camera" size={62} color="#5e6472" type="entypo" /></View>
-            <Text>This will help emergancy identify your child</Text>
+            <View style={styles.cameraBar}>
+                <View style={styles.imgInpt}><Icon iconStyle={{ marginTop: 10 }} name="camera" size={62} color="#5e6472" type="entypo" /></View>
+                <View style={styles.imgInpt}><Icon iconStyle={{ marginTop: 10 }} name="camera" size={62} color="#5e6472" type="entypo" /></View>
+            </View>
+            <Text style={{ fontSize: 10, left: '25%' }}>This will help emergancy identify your child</Text>
             <View style={styles.arrow}><Icon name="arrowright" size={24} color="white" type="antdesign" onPress={() => navigation.navigate('Setup3')} /></View>
         </View >
     );
@@ -133,8 +139,11 @@ function Setup3({ navigation }) {
                 keyboardType='numeric'
                 placeholder="Plate Number" />
             <Text style={styles.fieldTitle}>Picture of Vehicle</Text>
-            <View style={styles.imgInpt}><Icon iconStyle={{ marginTop: 10 }} name="camera" size={62} color="#5e6472" type="entypo" /></View>
-            <Text>This will help emergancy care identify your car</Text>
+            <View style={styles.cameraBar}>
+                <View style={styles.imgInpt}><Icon iconStyle={{ marginTop: 10 }} name="camera" size={62} color="#5e6472" type="entypo" /></View>
+                <View style={styles.imgInpt}><Icon iconStyle={{ marginTop: 10 }} name="camera" size={62} color="#5e6472" type="entypo" /></View>
+            </View>
+            <Text style={{ fontSize: 10, left: '23%' }}>This will help emergancy care identify your car</Text>
             <View style={styles.arrow}><Icon name="arrowright" size={24} color="white" type="antdesign" onPress={() => navigation.navigate('Home')} /></View>
         </View >
     );
@@ -143,11 +152,38 @@ function Setup3({ navigation }) {
 function Home({ navigation }) {
     return (
         <View style={{ flex: 1, backgroundColor: '#FABD27' }}>
-            <View style={{ position: 'absolute' }}><Text style={styles.text}> Child info, parent info, car info </Text></View>
+
+            <Text style={styles.homeTitle}> Home </Text>
+            <Text style={styles.homeText}>Option 1) Enter your destination address and start driving</Text>
+            <TextInput style={{
+                height: 50,
+                margin: 2,
+                left: 25,
+                borderWidth: 1,
+                padding: 10,
+                width: "85%",
+                borderRadius: 10,
+                marginBottom: 25,}}
+                maxLength={50}
+                placeholder="Enter Destination Address here" />
+            <Text style={styles.homeText}>Option 2) GPS will sense speed and know when phone is in a moving car. It will send child/pet reminder when it senses car has stopped for a period of time</Text>
+            <View style={{ left: "25%", width: '50%' }}><Button title='On'></Button></View>
+            <Text style={styles.homeText}>Option 3) Camera and motion sensor will detect if there is a person/pet in a hot car without supervision</Text>
+            <View style={{
+                backgroundColor: '#FABD27',
+                height: 110,
+                margin: 10,
+                borderWidth: 1,
+                padding: 10,
+                width: "30%",
+                borderRadius: 12,
+                left: '32%',}}><Icon iconStyle={{ marginTop: 10 }} name="camera" size={62} color="#5e6472" type="entypo" /></View>
+            <View style={{ left: "15%", width: '70%' }}><Button title='Dangerous heat levels Input'></Button></View>
+
             <View style={styles.navBar}>
-                <Icon name="arrowright" size={25} color="white" type="antdesign" onPress={() => navigation.navigate('Account')} />
-                <Icon name="arrowright" size={25} color="yellow" type="antdesign"/>
-                <Icon name="arrowright" size={25} color="white" type="antdesign" onPress={() => navigation.navigate('Info')} />
+                <Icon name="arrowright" size={25} color="#FABD27" type="antdesign" onPress={() => navigation.navigate('Account')} />
+                <Icon name="arrowright" size={25} color="white" type="antdesign"/>
+                <Icon name="arrowright" size={25} color="#FABD27" type="antdesign" onPress={() => navigation.navigate('Info')} />
             </View>
         </View >
     );
@@ -156,11 +192,40 @@ function Home({ navigation }) {
 function Account({ navigation }) {
     return (
         <View style={{ flex: 1, backgroundColor: '#FABD27' }}>
-            <View style={{ position: 'absolute' }}><Text style={styles.text}> GPS, Button, Camera, input end location </Text></View>
+            <View style={{ position: 'absolute' }}><Text style={styles.text}> Account </Text></View>
+
+            <View style={{marginBottom: 150}}></View>
+
+            <Text style={styles.fieldTitle}>First Name:</Text>
+    
+            <Text style={styles.fieldTitle}>Last Name:</Text>
+
+            <Text style={styles.fieldTitle}>Email Address:</Text>
+
+            <Text style={styles.fieldTitle}>Phone Number:</Text>
+
+            <Text style={styles.fieldTitle}>First Name:</Text>
+
+            <Text style={styles.fieldTitle}>Last Name:</Text>
+
+            <Text style={styles.fieldTitle}>Date of Birth:</Text>
+
+            <Text style={styles.fieldTitle}>Allergies:</Text>
+
+            <Text style={styles.fieldTitle}>Additional Info:</Text>
+
+            <Text style={styles.fieldTitle}>Model:</Text>
+
+            <Text style={styles.fieldTitle}>Year:</Text>
+
+            <Text style={styles.fieldTitle}>Color:</Text>
+
+            <Text style={styles.fieldTitle}>Plate Number:</Text>
+
             <View style={styles.navBar}>
-                <Icon name="arrowright" size={25} color="yellow" type="antdesign" />
-                <Icon name="arrowright" size={25} color="white" type="antdesign" onPress={() => navigation.navigate('Home')}/>
-                <Icon name="arrowright" size={25} color="white" type="antdesign" onPress={() => navigation.navigate('Info')} />
+                <Icon name="arrowright" size={25} color="white" type="antdesign" />
+                <Icon name="arrowright" size={25} color="#FABD27" type="antdesign" onPress={() => navigation.navigate('Home')}/>
+                <Icon name="arrowright" size={25} color="#FABD27" type="antdesign" onPress={() => navigation.navigate('Info')} />
             </View>
         </View >
     );
@@ -171,10 +236,19 @@ function Info({ navigation }) {
     return (
         <View style={{ flex: 1, backgroundColor: '#FABD27' }}>
             <View style={{ position: 'absolute' }}><Text style={styles.text}> Charity info and Statistics </Text></View>
+
+            <View style={{ marginBottom: 185 }}></View>
+            <Text style={{fontSize: 20, margin: 10}}>Statistics</Text>
+            <Text style={{ margin: 10 }}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</Text>
+            <Text style={{ fontSize: 20, margin: 10 }}>Charities</Text>
+            <Text style={{ margin: 10 }}>- KidsandCars.org</Text>
+            <Text style={{ margin: 10 }}>- babysav.org</Text>
+            <Text style={{ margin: 10 }}>- nhtsa.gov</Text>
+
             <View style={styles.navBar}>
-                <Icon name="arrowright" size={25} color="white" type="antdesign" onPress={() => navigation.navigate('Account')}m/>
-                <Icon name="arrowright" size={25} color="white" type="antdesign" onPress={() => navigation.navigate('Home')} />
-                <Icon name="arrowright" size={25} color="yellow" type="antdesign" />
+                <Icon name="arrowright" size={25} color="#FABD27" type="antdesign" onPress={() => navigation.navigate('Account')}m/>
+                <Icon name="arrowright" size={25} color="#FABD27" type="antdesign" onPress={() => navigation.navigate('Home')} />
+                <Icon name="arrowright" size={25} color="white" type="antdesign" />
             </View>
         </View >
     );
@@ -270,13 +344,17 @@ const styles = {
         margin: 0,
         bottom: 0,
     },
+    cameraBar: {
+        flexDirection: 'row',
+        left: '7%',
+    },
     registerTitle: {
         fontSize: 32,
         color: "black",
         textAlign: 'center',
         margin: 5,
-        marginTop: 100,
-        marginBottom: 20,
+        marginTop: 80,
+        marginBottom: 15,
     },
     fieldTitle: {
         fontSize: 13,
@@ -295,6 +373,18 @@ const styles = {
         padding: 10,
         width: "30%",
         borderRadius: 12,
-        left: '11%',
+    },
+    homeTitle: {
+        fontSize: 32,
+        color: "black",
+        textAlign: 'center',
+        marginTop: 80,
+        marginBottom: 30,
+    },
+    homeText: {
+        fontSize: 12,
+        color: "black",
+        textAlign: 'left',
+        margin: 15,
     },
 };
