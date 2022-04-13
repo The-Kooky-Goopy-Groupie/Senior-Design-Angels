@@ -38,7 +38,7 @@ function Start({ navigation }) {
                 textAlign: 'center',
                 margin: 15,
                 color: 'white',
-            }} onPress={() => navigation.navigate('Setup1')}>Start Protecting</Text></View>
+            }} onPress={() =>navigation.navigate('Setup1')}>Start Protecting</Text></View>
         </View >
     );
 }
@@ -239,11 +239,16 @@ function Info({ navigation }) {
 
             <View style={{ marginBottom: 185 }}></View>
             <Text style={{fontSize: 20, margin: 10}}>Statistics</Text>
-            <Text style={{ margin: 10 }}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</Text>
-            <Text style={{ fontSize: 20, margin: 10 }}>Charities</Text>
-            <Text style={{ margin: 10 }}>- KidsandCars.org</Text>
-            <Text style={{ margin: 10 }}>- babysav.org</Text>
-            <Text style={{ margin: 10 }}>- nhtsa.gov</Text>
+            <Text style={{ margin: 10 }}> With our help you should be able to keep your child safe from harm from vehicle overheat, But what about other children. Every year, up to 50 children lose their life to this fully preventable occurrence. That’s a single child for every single state, every year. Who knows where and when another child will be trapped with no way of escape. With your help however we can lower and even perhaps remove that statistic from existence. If you would like to help other kids, please consider donating to any of the following charities below to help us protect the future of the world. </Text>
+            <Text style={{ fontSize: 15, margin: 10 }}>Charities</Text>
+            <Text style={{ margin: 12 }}>KidsandCars.org</Text>
+            <View style={styles.arrowChar}><Icon name="arrowright" size={24} color="white" type="antdesign" onPress={() => window.location ='https://www.kidsandcars.org/'} /></View>
+            <Text style={{ margin: 12 }}>babysav.org</Text>
+            <View style={styles.arrowChar}><Icon name="arrowright" size={24} color="white" type="antdesign" onPress={() => window.location ='https://babysav.org/'} /></View>
+            <Text style={{ margin: 12 }}>nhtsa.gov</Text>
+            <View style={styles.arrowChar}><Icon name="arrowright" size={24} color="white" type="antdesign" onPress={() => window.location ='https://www.nhtsa.gov/'} /></View>
+            <Text style={{margin: 12 }}>Help Support Us!</Text>
+            <View style={styles.arrowChar}><Icon name="arrowright" size={24} color="white" type="antdesign" onPress={() => window.location ='LINK GOES HERE'} /></View>
 
             <View style={styles.navBar}>
                 <Icon name="arrowright" size={25} color="#FABD27" type="antdesign" onPress={() => navigation.navigate('Account')}m/>
@@ -304,6 +309,7 @@ export default function App() {
     );
 }
 
+
 const styles = {
     arrow: {
         backgroundColor: '#091638',
@@ -317,6 +323,16 @@ const styles = {
         right: 20,
         bottom: 20,
     },
+
+    arrowChar: {
+        backgroundColor: '#091638',
+        padding: 10,
+        width: "15%",
+        borderRadius: 90,
+        right: 10,
+        bottom: 10,
+    },
+
     text: {
         fontSize: 32,
         color: "black",
