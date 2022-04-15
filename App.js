@@ -71,7 +71,7 @@ function Setup1({ navigation }) {
                 <View style={styles.imgInpt}><Icon iconStyle={{ marginTop: 10 }} name="camera" size={62} color="#5e6472" type="entypo" /></View>
                 <View style={styles.imgInpt}><Icon iconStyle={{ marginTop: 10 }} name="camera" size={62} color="#5e6472" type="entypo" /></View>
             </View>
-            <Text style={{fontSize: 10, left: '12.5%'}}>This will help emergancy care verify you as the parent/guardian</Text>
+            <Text style={{fontSize: 10, left: '12.5%'}}>This will help emergency care verify you as the parent/guardian</Text>
             <View style={styles.arrow}><Icon name="arrowright" size={24} color="white" type="antdesign" onPress={() => navigation.navigate('Setup2')} /></View>
         </View >
     );
@@ -110,7 +110,7 @@ function Setup2({ navigation }) {
                 <View style={styles.imgInpt}><Icon iconStyle={{ marginTop: 10 }} name="camera" size={62} color="#5e6472" type="entypo" /></View>
                 <View style={styles.imgInpt}><Icon iconStyle={{ marginTop: 10 }} name="camera" size={62} color="#5e6472" type="entypo" /></View>
             </View>
-            <Text style={{ fontSize: 10, left: '25%' }}>This will help emergancy identify your child</Text>
+            <Text style={{ fontSize: 10, left: '25%' }}>This will help emergency identify your child</Text>
             <View style={styles.arrow}><Icon name="arrowright" size={24} color="white" type="antdesign" onPress={() => navigation.navigate('Setup3')} /></View>
         </View >
     );
@@ -144,7 +144,7 @@ function Setup3({ navigation }) {
                 <View style={styles.imgInpt}><Icon iconStyle={{ marginTop: 10 }} name="camera" size={62} color="#5e6472" type="entypo" /></View>
                 <View style={styles.imgInpt}><Icon iconStyle={{ marginTop: 10 }} name="camera" size={62} color="#5e6472" type="entypo" /></View>
             </View>
-            <Text style={{ fontSize: 10, left: '23%' }}>This will help emergancy care identify your car</Text>
+            <Text style={{ fontSize: 10, left: '23%' }}>This will help emergency care identify your car</Text>
             <View style={styles.arrow}><Icon name="arrowright" size={24} color="white" type="antdesign" onPress={() => navigation.navigate('Home')} /></View>
         </View >
     );
