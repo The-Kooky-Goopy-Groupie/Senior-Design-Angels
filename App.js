@@ -145,6 +145,29 @@ function Setup3({ navigation }) {
                 <View style={styles.imgInpt}><Icon iconStyle={{ marginTop: 10 }} name="camera" size={62} color="#5e6472" type="entypo" /></View>
             </View>
             <Text style={{ fontSize: 10, left: '23%' }}>This will help emergency care identify your car</Text>
+            <View style={styles.arrow}><Icon name="arrowright" size={24} color="white" type="antdesign" onPress={() => navigation.navigate('Setup4')} /></View>
+        </View >
+    );
+}
+
+//Sets up Other contacts info
+export function Setup4({ navigation }) {
+    return (
+        <View style={{ flex: 1, backgroundColor: '#FABD27' }}>
+            <Text style={styles.registerTitle}>Other Contacts</Text>
+            <Text style={styles.fieldTitle}>Contact 1</Text>
+            <TextInput style={styles.input}
+                maxLength={25}
+                placeholder="Phone Number" />
+            <Text style={styles.fieldTitle}>Contact 2</Text>
+            <TextInput style={styles.input}
+                maxLength={4}
+                keyboardType='Phone Number'
+                placeholder="Year" />
+            <Text style={styles.fieldTitle}>Contact 3</Text>
+            <TextInput style={styles.input}
+                maxLength={25}
+                placeholder="Phone Number" />
             <View style={styles.arrow}><Icon name="arrowright" size={24} color="white" type="antdesign" onPress={() => navigation.navigate('Home')} /></View>
         </View >
     );
@@ -397,6 +420,10 @@ function MyStack() {
             <Stack.Screen
                 name="Setup3"
                 component={Setup3}
+            />
+            <Stack.Screen
+                name="Setup4"
+                component={Setup4}
             />
             <Stack.Screen
                 name="Home"
