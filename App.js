@@ -150,15 +150,17 @@ export function Setup4({ navigation }) {
             <Text style={styles.fieldTitle}>Contact 1</Text>
             <TextInput style={styles.input}
                 maxLength={25}
+                keyboardType='numeric'
                 placeholder="Phone Number" />
             <Text style={styles.fieldTitle}>Contact 2</Text>
             <TextInput style={styles.input}
                 maxLength={4}
-                keyboardType='Phone Number'
+                keyboardType='numeric'
                 placeholder="Phone Number" />
             <Text style={styles.fieldTitle}>Contact 3</Text>
             <TextInput style={styles.input}
                 maxLength={25}
+                keyboardType='numeric'
                 placeholder="Phone Number" />
             <View style={styles.arrow}><Icon name="arrowright" size={24} color="white" type="antdesign" onPress={() => navigation.navigate('Home')} /></View>
         </View >
