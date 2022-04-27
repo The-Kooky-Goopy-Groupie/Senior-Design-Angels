@@ -211,7 +211,7 @@ function Account({ navigation }) {
     const [editVehicle, setEditVehicle] = useState(false);
     const [editContacts, setEditContacts] = useState(false);
     return (
-        <ScrollView style={{ flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: '#FABD27' }}>
+        <ScrollView style={{ flex: 1, backgroundColor: '#FABD27' }}>
             <Text style={styles.registerTitle}> Account </Text>
 
             <Text style={styles.registerTitle}>Parent's Info</Text>
