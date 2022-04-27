@@ -1,6 +1,6 @@
 import * as React from 'react';
 import {useState} from "react";
-import { View, Button, Text, Animated, TextInput, Image } from 'react-native';
+import { View, ScrollView, Button, TouchableOpacity, Text, Animated, TextInput, Image } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { LinearGradient } from 'expo-linear-gradient';
@@ -25,21 +25,14 @@ function Start({ navigation }) {
                 source={{ uri: 'https://i.pinimg.com/564x/2f/f0/ee/2ff0eeb4536e3ba1f9f2a1f9be3328b6.jpg' }}
             />
 
-            <View style={{
-                //Button styleing title screen
-                backgroundColor: '#091638',
-                padding: 0,
-                width: "50%",
-                marginBottom: 0,
-                marginTop: 40,
-                borderRadius: 50,
-            }}><Text style={{
-                // text style for button.
-                fontSize: 18,
-                textAlign: 'center',
-                margin: 15,
-                color: 'white',
-            }} onPress={() =>navigation.navigate('Setup1')}>Start Protecting</Text></View>
+            <TouchableOpacity 
+                style={styles.tapButton}
+                onPress={() =>navigation.navigate('Setup1')}
+            >
+            <Text 
+                style={styles.buttonText}>                
+                Start Protecting
+            </Text></TouchableOpacity>
         </View >
     );
 }
@@ -127,9 +120,8 @@ function Setup3({ navigation }) {
                 placeholder="Model" />
             <Text style={styles.fieldTitle}>Year</Text>
             <TextInput style={styles.input}
-                maxLength={4}
-                keyboardType='numeric'
-                placeholder="Year" />
+                maxLength={25}
+                placeholder="Model" />
             <Text style={styles.fieldTitle}>Color</Text>
             <TextInput style={styles.input}
                 maxLength={25}
@@ -217,26 +209,21 @@ function Account({ navigation }) {
     const [editParent, setEditParent] = useState(false);
     const [editChild, setEditChild] = useState(false);
     const [editVehicle, setEditVehicle] = useState(false);
+    const [editContacts, setEditContacts] = useState(false);
     return (
-        <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: '#FABD27' }}>
+        <ScrollView style={{ flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: '#FABD27' }}>
             <Text style={styles.registerTitle}> Account </Text>
 
             <Text style={styles.registerTitle}>Parent's Info</Text>
 
-            <View style={{
-                backgroundColor: '#091638',
-                padding: 0,
-                width: "50%",
-                marginBottom: 0,
-                marginTop: 40,
-                borderRadius: 50,
-            }}><Text style={{
-                // text style for button.
-                fontSize: 18,
-                textAlign: 'center',
-                margin: 15,
-                color: 'white',
-            }} onPress={() => setEditParent(previousState => !previousState)}>Edit Parent's Info</Text></View>
+            <TouchableOpacity 
+                style={styles.tapButton}
+                onPress={() => setEditParent(previousState => !previousState)}
+            >
+            <Text 
+                style={styles.buttonText}>                
+                Edit Parent's Info
+            </Text></TouchableOpacity>
 
             <Text style={styles.fieldTitle}>First Name</Text>
             <TextInput style={styles.input}
@@ -265,20 +252,14 @@ function Account({ navigation }) {
 
             <Text style={styles.registerTitle}>Child's Info</Text>
 
-            <View style={{
-                backgroundColor: '#091638',
-                padding: 0,
-                width: "50%",
-                marginBottom: 0,
-                marginTop: 40,
-                borderRadius: 50,
-            }}><Text style={{
-                // text style for button.
-                fontSize: 18,
-                textAlign: 'center',
-                margin: 15,
-                color: 'white',
-            }} onPress={() => setEditChild(previousState => !previousState)}>Edit Child's Info</Text></View>
+            <TouchableOpacity 
+                style={styles.tapButton}
+                onPress={() => setEditChild(previousState => !previousState)}
+            >
+            <Text 
+                style={styles.buttonText}>                
+                Edit Child's Info
+            </Text></TouchableOpacity>
 
             <Text style={styles.fieldTitle}>First Name</Text>
             <TextInput style={styles.input}
@@ -315,20 +296,14 @@ function Account({ navigation }) {
 
             <Text style={styles.registerTitle}>Vehicle Info</Text>
 
-            <View style={{
-                backgroundColor: '#091638',
-                padding: 0,
-                width: "50%",
-                marginBottom: 0,
-                marginTop: 40,
-                borderRadius: 50,
-            }}><Text style={{
-                // text style for button.
-                fontSize: 18,
-                textAlign: 'center',
-                margin: 15,
-                color: 'white',
-            }} onPress={() => setEditVehicle(previousState => !previousState)}>Edit Vehicle's Info</Text></View>
+            <TouchableOpacity 
+                style={styles.tapButton}
+                onPress={() => setEditVehicle(previousState => !previousState)}
+            >
+            <Text 
+                style={styles.buttonText}>                
+                Edit Vehicle's Info
+            </Text></TouchableOpacity>
 
             <Text style={styles.fieldTitle}>Model</Text>
             <TextInput style={styles.input}
@@ -356,19 +331,52 @@ function Account({ navigation }) {
                 placeholder="Plate Number"
                 editable = {editVehicle} />
 
+            <Text style={styles.registerTitle}>Other Contacts</Text>
+
+            <TouchableOpacity 
+                style={styles.tapButton}
+                onPress={() => setEditContacts(previousState => !previousState)}
+            >
+            <Text 
+                style={styles.buttonText}>                
+                Edit Emergency Contact Info
+            </Text></TouchableOpacity>
+
+            <Text style={styles.fieldTitle}>Contact 1</Text>
+
+            <TextInput style={styles.input}
+                maxLength={25}
+                placeholder="Phone Number" 
+                editable = {editContacts} />
+                    
+            <Text style={styles.fieldTitle}>Contact 2</Text>
+
+            <TextInput style={styles.input}
+                maxLength={25}
+                placeholder="Phone Number" 
+                editable = {editContacts} />
+                    
+            <Text style={styles.fieldTitle}>Contact 3</Text>
+            <TextInput style={styles.input}
+                maxLength={25}
+                placeholder="Phone Number" 
+                editable = {editContacts} />
+                    
+            <Text style={styles.registerTitle}> </Text>
+
             <View style={styles.navBar}>
                 <Icon name="arrowright" size={25} color="white" type="antdesign" />
                 <Icon name="arrowright" size={25} color="#FABD27" type="antdesign" onPress={() => navigation.navigate('Home')}/>
                 <Icon name="arrowright" size={25} color="#FABD27" type="antdesign" onPress={() => navigation.navigate('Info')} />
             </View>
-        </View >
+        </ScrollView >
     );
 }
 
 //Dylan Charity and statistics screen
 function Info({ navigation }) {
     return (
-        <View style={{ flex: 1, backgroundColor: '#FABD27' }}>
+        <ScrollView style={{ flex: 1, backgroundColor: '#FABD27' }}>
             <View style={{ position: 'absolute' }}><Text style={styles.text}> Charity info and Statistics </Text></View>
 
             <View style={{ marginBottom: 185 }}></View>
@@ -385,13 +393,14 @@ function Info({ navigation }) {
             <Text style={{ margin: 12 }}>nhtsa.gov</Text>
             <View style={styles.arrowChar}><Icon name="arrowright" size={24} color="white" type="antdesign" onPress={() => window.location ='https://www.nhtsa.gov/'} /></View>
             
+            <Text style={styles.registerTitle}> </Text>
 
             <View style={styles.navBar}>
                 <Icon name="arrowright" size={25} color="#FABD27" type="antdesign" onPress={() => navigation.navigate('Account')}m/>
                 <Icon name="arrowright" size={25} color="#FABD27" type="antdesign" onPress={() => navigation.navigate('Home')} />
                 <Icon name="arrowright" size={25} color="white" type="antdesign"/>
             </View>
-        </View >
+        </ScrollView >
     );
 }
 
@@ -542,5 +551,19 @@ const styles = {
         color: "black",
         textAlign: 'left',
         margin: 15,
+    },
+    tapButton: {
+        backgroundColor: '#091638',
+        padding: 0,
+        width: "50%",
+        marginBottom: 0,
+        marginTop: 40,
+        borderRadius: 50,
+    },
+    buttonText: {
+        fontSize: 18,
+        textAlign: 'center',
+        margin: 15,
+        color: 'white',
     },
 };
