@@ -163,7 +163,7 @@ export function Setup4({ navigation }) {
             <TextInput style={styles.input}
                 maxLength={4}
                 keyboardType='Phone Number'
-                placeholder="Year" />
+                placeholder="Phone Number" />
             <Text style={styles.fieldTitle}>Contact 3</Text>
             <TextInput style={styles.input}
                 maxLength={25}
